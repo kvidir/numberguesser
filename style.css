@@ -234,6 +234,15 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
 
 @media (max-width: 768px) {
   .navbar {
