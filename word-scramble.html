@@ -1,15 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
+  <title>Word Scramble</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-logo">🎮 Mini Arcade</div>
-    <ul class="navbar-links">
+    <button class="navbar-toggle" id="menu-toggle">☰</button>
+    <ul class="navbar-links" id="navbar-links">
       <li><a href="index.html">Number Guesser</a></li>
       <li><a href="rock-paper-scissors.html">Rock Paper Scissors</a></li>
       <li><a href="memory-match.html">Memory Match</a></li>
@@ -17,13 +19,26 @@
       <li><a href="quick-math.html">Quick Math</a></li>
       <li><a href="reaction-timer.html">Reaction Timer</a></li>
       <li><a href="word-scramble.html">Word Scramble</a></li>
-
     </ul>
   </nav>
 
   <div class="game-container">
-    <h1>✊ Word Scramble</h1>
-    <p>This game is coming soon!</p>
+    <header>
+      <h1>🧩 Word Scramble</h1>
+      <p>Unscramble the word below:</p>
+    </header>
+
+    <div class="scramble-area">
+      <h2 id="scrambled-word">Loading...</h2>
+      <input type="text" id="user-guess" placeholder="Your guess here" />
+      <button class="button" id="submit-guess">Submit</button>
+      <p id="result-message"></p>
+    </div>
+
+    <button class="button" id="next-word" style="display: none;">Next Word</button>
   </div>
+
+  <script src="script.js"></script>
+  <script src="word-scramble.js"></script>
 </body>
 </html>
