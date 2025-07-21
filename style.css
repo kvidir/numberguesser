@@ -4,115 +4,80 @@
 }
 
 body {
-  margin: 0 auto;
-  padding: 3px;
-  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .game-container {
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  display: flex;
-  justify-content: center
+header h1 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .rounds {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 30px;
 }
 
 .round-label {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 0px;
-}
-
-.guess {
-  min-width: 303px;
-  height: 328px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 19px;
-}
-
-.guessing-area {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 60px;
-}
-
-.guess-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .guess-label {
   font-size: 18px;
   font-weight: 700;
-  margin: 0;
+  margin: 5px 0;
 }
 
-.score-label {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.target-guess {
+.guessing-area {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 20px;
 }
 
-.computer-guess {
+.guess {
   background-color: #ececec;
-}
-
-#computer-guess {
-  font-size: 50px;
-  font-weight: 700;
-  color: #a5a5a5;
-}
-
-.human-guess {
-  border: 1px solid #979797;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .guess input {
-  height: 90px;
   width: 90px;
+  height: 90px;
   font-size: 30px;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .number-controls {
-  font-size: 0;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .number-control {
   border: solid 1px #4c7ef3;
-  display: inline-block;
   width: 45px;
   height: 35px;
   font-size: 24px;
   font-weight: 700;
   color: #4c7ef3;
   cursor: pointer;
+  background: none;
 }
 
 .number-controls button[disabled] {
@@ -128,68 +93,79 @@ header {
 .right {
   border-top-right-radius: 22.5px;
   border-bottom-right-radius: 22.5px;
-  border-left-width: 0px;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-around;
+  border-left-width: 0;
 }
 
 .button {
   background-color: #4c7ef3;
   color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
 }
 
-#guess {
-  padding: 20px;
-  width: 169px;
-  height: 59px;
-  border: none;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-#next-round {
-  width: 179px;
-  height: 64px;
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-}
-  
 .button[disabled] {
   background-color: #d2d2d2;
   color: #a0a0a0;
   cursor: default;
 }
 
+#guess {
+  margin-top: 10px;
+}
+
+#next-round {
+  margin: 0 auto 60px auto;
+  display: block;
+}
+
+.winning-text {
+  font-size: 18px;
+  color: #ec3636;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
 .instructions {
-  background-color: #ececec;
-  width: 100%;
+  background: linear-gradient(to right, #f0f0f0, #ffffff);
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 16px;
 }
 
 .instruction {
-  width: 180px;
-  padding: 2px;
+  width: 200px;
+  margin: 10px;
   text-align: center;
 }
 
 .instructions h3 {
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-.winning-text, .winning-text[disabled] {
-  color: #ec3636;
-  font-weight: 700;
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .guessing-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instruction {
+    width: 100%;
+    max-width: 300px;
+  }
 }
