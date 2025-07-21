@@ -1,17 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-logo">🎮 Mini Arcade</div>
     <ul class="navbar-links">
       <li><a href="index.html">Number Guesser</a></li>
-      <li><a href="rock-paper-scissors.html">Rock Paper Scissors</a></li>
+      <li><a href="rock-paper-scissors.html" class="active">Rock Paper Scissors</a></li>
       <li><a href="memory-match.html">Memory Match</a></li>
       <li><a href="even-or-odd.html">Even or Odd?</a></li>
       <li><a href="quick-math.html">Quick Math</a></li>
@@ -21,8 +21,29 @@
   </nav>
 
   <div class="game-container">
-    <h1>✊ Rock Paper Scissors</h1>
-    <p>This game is coming soon!</p>
+    <header>
+      <h1>✊ Rock ✋ Paper ✌ Scissors</h1>
+    </header>
+
+    <div class="scoreboard">
+      <p>You: <span id="player-score">0</span></p>
+      <p>Computer: <span id="computer-score">0</span></p>
+      <p>Streak: <span id="player-streak">0</span></p>
+    </div>
+
+    <div class="rps-buttons">
+      <button class="button rps" data-choice="rock">✊ Rock</button>
+      <button class="button rps" data-choice="paper">✋ Paper</button>
+      <button class="button rps" data-choice="scissors">✌ Scissors</button>
+    </div>
+
+    <div class="results">
+      <p id="player-choice">You chose: -</p>
+      <p id="computer-choice">Computer chose: -</p>
+      <h2 id="result-text">Make your move!</h2>
+    </div>
   </div>
+
+  <script src="rock-paper-scissors.js"></script>
 </body>
 </html>
