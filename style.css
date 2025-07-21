@@ -277,6 +277,21 @@ header h1 {
   margin-bottom: 20px;
 }
 
+.memory-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.memory-controls select,
+.memory-controls button {
+  padding: 10px 15px;
+  font-size: 14px;
+  margin: 0 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
 .memory-grid {
   display: grid;
   grid-template-columns: repeat(4, 80px);
