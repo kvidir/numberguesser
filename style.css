@@ -269,6 +269,49 @@ header h1 {
   font-size: 28px;
 }
 
+.memory-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 15px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #4c7ef3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+  user-select: none;
+}
+
+.card.matched {
+  background-color: #8bc34a;
+  cursor: default;
+}
+
+.card.revealed {
+  background-color: #fff;
+  color: #4c7ef3;
+  border: 2px solid #4c7ef3;
+  font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
   .navbar {
