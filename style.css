@@ -217,21 +217,23 @@ header h1 {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navbar-toggle {
     display: block;
+    align-self: flex-end;
+    margin-top: 5px;
   }
 
   .navbar-links {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
     display: none;
-    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    gap: 10px;
     background-color: #4c7ef3;
-    padding: 10px;
     border-radius: 10px;
   }
 
@@ -240,6 +242,13 @@ header h1 {
   }
 
   .navbar-links li {
-    text-align: center;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .navbar-links li a {
+    display: block;
+    padding: 10px 0;
   }
 }
