@@ -30,6 +30,8 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar-links li a {
@@ -42,7 +44,6 @@ body {
 .navbar-links li a:hover {
   opacity: 0.8;
 }
-
 
 .game-container {
   max-width: 700px;
