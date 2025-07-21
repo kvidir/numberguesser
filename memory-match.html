@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar">
@@ -21,10 +21,21 @@
   </ul>
 </nav>
 
-
   <div class="game-container">
-    <h1>✊ Memory Match</h1>
-    <p>This game is coming soon!</p>
+    <header>
+      <h1>🧠 Memory Match</h1>
+    </header>
+
+    <div class="memory-stats">
+      <p>Moves: <span id="moves">0</span></p>
+      <p>Matches: <span id="matches">0</span></p>
+      <p>Time: <span id="timer">0</span>s</p>
+    </div>
+
+    <div class="memory-grid" id="memory-grid"></div>
   </div>
+
+  <script src="memory-match.js"></script>
 </body>
 </html>
+
