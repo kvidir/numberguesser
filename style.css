@@ -215,6 +215,26 @@ header h1 {
   cursor: pointer;
 }
 
+.scramble-area {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.scramble-area h2 {
+  font-size: 36px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+#user-guess {
+  font-size: 18px;
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
