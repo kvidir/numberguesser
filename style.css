@@ -205,3 +205,41 @@ header h1 {
     max-width: 300px;
   }
 }
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+    margin-top: 10px;
+    background-color: #4c7ef3;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+}
