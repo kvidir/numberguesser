@@ -41,3 +41,4 @@ const navLinks = document.getElementById('navbar-links');
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
+
