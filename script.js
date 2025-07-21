@@ -33,3 +33,11 @@ function isValidGuess(guess) {
   const num = Number(guess);
   return Number.isInteger(num) && num >= 0 && num <= 9;
 }
+
+// Mobile navbar toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('navbar-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
