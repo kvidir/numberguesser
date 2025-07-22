@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
+  <title>Reaction Timer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-logo">🎮 Mini Arcade</div>
-    <ul class="navbar-links">
+    <ul class="navbar-links" id="navbar-links">
       <li><a href="index.html">Number Guesser</a></li>
       <li><a href="rock-paper-scissors.html">Rock Paper Scissors</a></li>
       <li><a href="memory-match.html">Memory Match</a></li>
@@ -21,9 +21,13 @@
     </ul>
   </nav>
 
-  <div class="game-container">
-    <h1>✊ Even or Odd</h1>
-    <p>This game is coming soon!</p>
+  <div class="game-container reaction-game">
+    <h1>⚡ Reaction Timer</h1>
+    <p id="reaction-message">Click to start...</p>
+    <div class="reaction-box" id="reaction-box"></div>
+    <p id="reaction-result"></p>
   </div>
+
+  <script src="reaction-timer.js"></script>
 </body>
 </html>
