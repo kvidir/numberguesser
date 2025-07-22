@@ -143,6 +143,39 @@ restartBtn.addEventListener('click', () => {
 
 initBoard();
 
+// --- Swipe support for mobile devices ---
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener('touchstart', e => {
+  const touch = e.touches[0];
+  touchStartX = touch.clientX;
+  touchStartY = touch.clientY;
+}, { passive: true });
+
+document.addEventListener('touchend', e => {
+  const touch = e.changedTouches[0];
+  const dx = touch.clientX - touchStartX;
+  const dy = touch.clientY - touchStartY;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    // Horizontal swipe
+    if (dx > 30) {
+      moveRight();
+    } else if (dx < -30) {
+      moveLeft();
+    }
+  } else {
+    // Vertical swipe
+    if (dy > 30) {
+      moveDown();
+    } else if (dy < -30) {
+      moveUp();
+    }
+  }
+}, { passive: true });
+
+
 // Mobile navbar toggle
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('navbar-links');
