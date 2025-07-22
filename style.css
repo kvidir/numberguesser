@@ -372,6 +372,30 @@ header h1 {
   100% { transform: translateX(0); }
 }
 
+.math-info {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.math-question {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#qm-answer {
+  font-size: 24px;
+  width: 100px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#qm-feedback {
+  font-weight: bold;
+  margin-top: 15px;
+  height: 24px;
+}
+
 
 @media (max-width: 768px) {
   .navbar {
