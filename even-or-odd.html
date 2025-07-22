@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
+  <title>Even or Odd?</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,10 +21,26 @@
   </ul>
 </nav>
 
-
   <div class="game-container">
-    <h1>✊ Even or Odd</h1>
-    <p>This game is coming soon!</p>
+    <h1>🔢 Even or Odd?</h1>
+    <div class="scoreboard">
+      <p>Score: <span id="score">0</span></p>
+      <p>Streak: <span id="streak">0</span></p>
+    </div>
+
+    <div class="number-box">
+      <p id="number-display">?</p>
+    </div>
+
+    <div class="buttons">
+      <button class="button" id="even-btn">Even</button>
+      <button class="button" id="odd-btn">Odd</button>
+    </div>
+
+    <p class="feedback" id="feedback-msg"></p>
+    <button class="button" id="next-btn" disabled>Next Number</button>
   </div>
+
+  <script src="even-or-odd.js"></script>
 </body>
 </html>
