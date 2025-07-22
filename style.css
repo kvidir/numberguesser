@@ -417,6 +417,7 @@ header h1 {
   .navbar {
     flex-direction: column;
     align-items: center;
+    justify-content: center
   }
 
   .navbar-toggle {
