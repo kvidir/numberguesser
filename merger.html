@@ -25,13 +25,14 @@
   <main class="merger-container">
     <header>
       <h1>🧩 Merger</h1>
-      <div class="scoreboard">
-        <div>Score: <span id="score">0</span></div>
-        <button id="restart">🔄 Restart</button>
+      <div class="score-panel">
+        <div>Score: <span id="merger-score">0</span></div>
+        <div>High Score: <span id="merger-high-score">0</span></div>
+        <button id="restart-merger">🔄 Restart</button>
       </div>
     </header>
 
-    <div class="grid" id="grid"></div>
+    <div id="merger-grid" class="grid"></div>
 
     <div id="game-over" class="hidden">
       <p>💥 Game Over!</p>
@@ -40,5 +41,11 @@
   </main>
 
   <script src="merger.js"></script>
+  <script>
+    // Navbar toggle behavior
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('navbar-links').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
